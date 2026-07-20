@@ -1,0 +1,18 @@
+# Edge-case categories
+
+| # | Category | Examples |
+|---|---|---|
+| 1 | Empty/null | `[]`, `None`, `""` |
+| 2 | Boundary numbers | 0, 1, max, max+1 |
+| 3 | Off-by-one | last index, first index |
+| 4 | Unicode | non-ASCII, emoji, RTL |
+| 5 | Encoding | UTF-8, Latin-1, malformed |
+| 6 | Time | leap second, DST, clock skew |
+| 7 | Timezone | UTC vs local, ambiguous |
+| 8 | Locale | decimal separator, sorting |
+| 9 | Float | NaN, Inf, precision |
+| 10 | Strings | whitespace, case, very long |
+| 11 | Concurrency | race, deadlock, timeout |
+| 12 | Resource | OOM, disk full, fd limit |
+| 13 | Idempotency | duplicate calls |
+| 14 | Adversarial | injection, oversized input |

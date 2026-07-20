@@ -1,0 +1,5 @@
+Role: senior backend engineer.
+Context: stack trace, versions, relevant code.
+Task: analyze the stack trace, propose 3–5 ranked root-cause hypotheses, and suggest falsifiable checks.
+Format: markdown with sections Hypotheses, Evidence, Next checks.
+Quality: do not guess; mark uncertainty explicitly; say INSUFFICIENT_CONTEXT if data is missing.

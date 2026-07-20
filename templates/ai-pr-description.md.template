@@ -1,0 +1,14 @@
+## What
+<!-- One-paragraph description of the change -->
+
+## Acceptance
+<!-- How to verify manually -->
+
+## AI provenance
+- Model:
+- Prompts used: `prompts/...`
+- Estimated % of manual changes:
+- Spec/Rules ref:
+
+## Review focus
+<!-- What the reviewer should pay extra attention to -->

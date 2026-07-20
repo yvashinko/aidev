@@ -1,0 +1,44 @@
+# Specification: [SERVICE_NAME]
+
+## 1. Stack & versions
+- Language/runtime:
+- Framework:
+- Database:
+- Key dependencies and versions:
+- Deployment target:
+
+## 2. Domain
+- Core entities:
+- Business invariants:
+- User roles:
+
+## 3. API contracts
+- Transport: REST / gRPC / events
+- Authentication:
+- Endpoints/events overview:
+- Request/response schemas: link to OpenAPI/proto
+
+## 4. Non-functional requirements
+- Latency p95:
+- Availability:
+- Concurrency:
+- Data retention:
+
+## 5. Architecture style
+- Monolith / microservice / serverless
+- Layering (API → service → repository)
+- External integrations:
+
+## 6. Security baseline
+- AuthN/AuthZ:
+- Input validation:
+- Secret management:
+- Forbidden patterns:
+
+## 7. Definition of Done
+- [ ] Feature implemented and manually smoke-tested
+- [ ] Unit + integration tests added
+- [ ] Lint and type checks pass
+- [ ] README/docs updated
+- [ ] ADR created if architecture changed
+- [ ] AI provenance documented in PR

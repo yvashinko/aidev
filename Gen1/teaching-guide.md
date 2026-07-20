@@ -53,13 +53,14 @@
 - Не оставлять артефакты без критериев качества (код, тесты, документы).
 
 ## Структура материалов
-- `module-01-llm-fundamentals.md`
-- `module-02-prompt-engineering.md`
-- `module-03-codegen-mvp.md`
-- `module-04-debugging-logs.md`
-- `module-05-testing-quality.md`
-- `module-06-docs-architecture.md`
-- `module-07-local-models-rag.md`
+- `Gen1/01-llm-fundamentals/01-chapter.md` + `01-notes.md`
+- `Gen1/02-prompt-engineering/02-chapter.md` + `02-notes.md`
+- `Gen1/03-codegen-mvp/03-chapter.md` + `03-notes.md`
+- `Gen1/04-debugging-logs/04-chapter.md` + `04-notes.md`
+- `Gen1/05-testing-quality/05-chapter.md` + `05-notes.md`
+- `Gen1/06-docs-architecture/06-chapter.md` + `06-notes.md`
+- `Gen1/07-local-models/07-chapter.md` + `07-notes.md`
+- `Gen1/08-rag/08-chapter.md` + `08-notes.md`
 
 ## AI Adoption Playbook: правила и опыт внедрения ИИ в разработку
 

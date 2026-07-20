@@ -1,0 +1,23 @@
+# Minimal Reproducible Example
+
+## Symptom
+<!-- What fails and how -->
+
+## Steps to reproduce
+1.
+2.
+3.
+
+## Expected behavior
+
+## Actual behavior
+
+## Environment
+- OS:
+- Runtime version:
+- Relevant dependency versions:
+
+## Code
+```python
+# ≤ 30 lines, ≤ 1 file
+```

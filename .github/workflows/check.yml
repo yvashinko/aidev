@@ -1,0 +1,25 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            Gen1/**/*.md
+            templates/**/*.md
+            prompts/**/*.md
+            examples/**/*.md
+            *.md
+      - name: Check links
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress Gen1/**/*.md templates/**/*.md prompts/**/*.md examples/**/*.md *.md

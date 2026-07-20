@@ -1,0 +1,26 @@
+# Build artifacts
+/dist/
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+*.db
+
+# AI tool transcripts
+.specstory/
+.claude/
+.aider*
+transcripts/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store

@@ -1,0 +1,24 @@
+[
+  {
+    "question": "How does idempotency work for POST /orders?",
+    "contexts": [
+      "POST /orders accepts an Idempotency-Key header. The server stores the response for 24 hours and returns it on retries with the same key and body.",
+      "If the same Idempotency-Key is sent with a different body, the server returns 409 Conflict."
+    ],
+    "ground_truth": "Idempotency is implemented via the Idempotency-Key header with a 24-hour TTL; same key and body returns cached response, different body returns 409."
+  },
+  {
+    "question": "Which database does [PROJECT_NAME] use?",
+    "contexts": [
+      "The service uses PostgreSQL 16 as the primary database via asyncpg."
+    ],
+    "ground_truth": "PostgreSQL 16."
+  },
+  {
+    "question": "What is the default cache TTL?",
+    "contexts": [
+      "Redis is used for caching idempotency keys with a default TTL of 24 hours."
+    ],
+    "ground_truth": "24 hours."
+  }
+]

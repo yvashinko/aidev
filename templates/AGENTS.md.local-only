@@ -1,0 +1,13 @@
+# AGENTS.md — local-only / air-gapped project
+
+## Constraints
+- No cloud LLM APIs. Use only local Ollama/LM Studio endpoints.
+- No code or logs leave the perimeter.
+
+## Allowed models
+- Qwen2.5-Coder-32B-Instruct q4_K_M
+- Llama 3.1 8B Instruct q4_K_M
+
+## Security
+- Transcripts stored in `~/.local/ai-transcripts/`, never in repo.
+- MCP servers only from internal registry.

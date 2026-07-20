@@ -1,0 +1,9 @@
+C4Container
+    title Container Diagram
+    Person(user, "User")
+    Container(web, "Web App", "React", "User interface")
+    Container(api, "API", "FastAPI", "Business logic")
+    ContainerDb(db, "Database", "PostgreSQL", "Persistence")
+    Rel(user, web, "Uses HTTPS")
+    Rel(web, api, "JSON/HTTPS")
+    Rel(api, db, "SQL")

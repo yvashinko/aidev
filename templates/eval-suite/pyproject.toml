@@ -1,0 +1,12 @@
+[project]
+name = "[PROJECT_NAME]-eval"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=2.20",
+    "langchain-community>=0.2",
+    "ragas>=0.1",
+]
+
+[tool.ruff]
+line-length = 100

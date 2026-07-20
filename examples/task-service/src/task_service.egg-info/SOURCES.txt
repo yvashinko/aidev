@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/task_service/__init__.py
+src/task_service/config.py
+src/task_service/main.py
+src/task_service/models.py
+src/task_service/repository.py
+src/task_service/service.py
+src/task_service.egg-info/PKG-INFO
+src/task_service.egg-info/SOURCES.txt
+src/task_service.egg-info/dependency_links.txt
+src/task_service.egg-info/requires.txt
+src/task_service.egg-info/top_level.txt
+src/task_service/routers/__init__.py
+src/task_service/routers/tasks.py
+tests/test_integration.py
+tests/test_unit.py

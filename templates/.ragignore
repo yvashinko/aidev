@@ -1,0 +1,9 @@
+# Files and paths excluded from RAG indexing
+.env
+.env.*
+secrets/
+*.key
+*.pem
+node_modules/
+__pycache__/
+.transcripts/

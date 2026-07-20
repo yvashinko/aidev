@@ -1,0 +1,19 @@
+Integration test fixture for [COMPONENT]
+
+Setup:
+- Start test DB/queue via testcontainers.
+- Apply migrations.
+- Seed minimal data.
+
+Teardown:
+- Truncate tables / delete test topics.
+- Stop containers.
+
+Reusable helpers:
+- `create_task(client, ...) -> id`
+- `cleanup()`
+
+Do not:
+- Use real production credentials.
+- Share mutable state between tests.
+- Sleep; use ready-state checks.

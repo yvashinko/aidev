@@ -1,0 +1,32 @@
+# [PROJECT_NAME]
+
+One-sentence description.
+
+## Quick start
+
+```bash
+git clone ...
+cd [PROJECT_NAME]
+cp .env.example .env
+make install
+make run
+```
+
+## Smoke test
+
+```bash
+curl http://localhost:8000/health
+```
+
+## Environment variables
+
+| Variable | Default | Description |
+|---|---|---|
+
+## Architecture
+
+See `docs/adr/`.
+
+## Known limitations
+
+- ...

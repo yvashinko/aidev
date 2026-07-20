@@ -1,0 +1,36 @@
+# AGENTS.md — [PROJECT_NAME]
+
+## Stack & versions
+- Language/runtime:
+- Framework:
+- Database:
+- Package manager:
+
+## Conventions
+- Naming: snake_case / camelCase / PascalCase
+- Error style: raise `DomainError` / return `ProblemDetails`
+- Logging: structured JSON, correlation_id
+- Testing: pytest / xUnit / Jest
+
+## Security baseline
+- Secrets only via env vars; no hardcoded keys.
+- SQL only via parameterized queries / ORM.
+- Input validation on every boundary.
+- No `CORS(*)` with credentials in production.
+
+## Don'ts
+- Do not return ORM entities from API.
+- Do not use generic `Repository<T>`.
+- Do not add dependencies without lockfile update.
+- Do not commit transcripts or `.env`.
+
+## Test & run commands
+- `make test`
+- `make lint`
+- `make run`
+
+## Definition of Done
+- [ ] Code compiles/parses
+- [ ] Tests pass
+- [ ] Lint/type checks pass
+- [ ] README updated

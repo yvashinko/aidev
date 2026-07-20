@@ -1,0 +1,5 @@
+Role: SRE.
+Context: structured logs, service topology, timeframe.
+Task: build an incident timeline, identify symptom vs root cause, and propose mitigation.
+Format: markdown timeline + root-cause statement + action items.
+Quality: distinguish correlation from causation; flag missing correlation_id; include blast radius.

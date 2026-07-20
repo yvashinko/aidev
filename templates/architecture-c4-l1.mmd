@@ -1,0 +1,7 @@
+C4Context
+    title System Context Diagram
+    Person(user, "User", "Interacts with the system")
+    System(app, "Application", "Core service")
+    System_Ext(ext, "External System", "Third-party integration")
+    Rel(user, app, "Uses")
+    Rel(app, ext, "Calls")

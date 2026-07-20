@@ -1,0 +1,9 @@
+Role: senior engineer writing deterministic tests.
+Context: function signature, types, edge-case constraints.
+Task: generate unit tests covering happy path and edge cases.
+Format: code only in [LANGUAGE] using [FRAMEWORK].
+Quality:
+- One assert per test.
+- Use Arrange-Act-Assert.
+- No tautologies; assertions check observable behavior.
+- Include property/invariant checks where applicable.
