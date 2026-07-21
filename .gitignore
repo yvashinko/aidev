@@ -1,6 +1,7 @@
 # Build artifacts
 /dist/
 *.pdf
+.pdf
 
 # Python
 __pycache__/
