@@ -1,92 +1,29 @@
-# environment.txt — зависимости окружения для работы с репозиторием
+# environment.txt — Python-зависимости проекта
 #
-# Этот файл описывает инструменты, необходимые для сборки PDF/HTML,
-# запуска проверок и работы с учебным примером.
+# Установка:
+#   pip install -r environment.txt
+#
+# После установки можно конвертировать Markdown в PDF без pandoc/xelatex:
+#   python3 scripts/md-to-pdf.py research/2026-07-ai-landscape.md
+#   python3 scripts/md-to-pdf-all.py
+#
+# Для работы shell-скриптов (scripts/md-to-pdf.sh, scripts/md-to-pdf-all.sh)
+# по-прежнему требуются pandoc и xelatex.
 
-## Обязательно для конвертации Markdown → PDF
+## Конвертация Markdown → PDF (pure Python)
+xhtml2pdf>=0.2.17
+markdown>=3.4
 
-- pandoc >= 3.0
-  https://pandoc.org/installing.html
+## Работа со скриптами и учебным примером
+requests>=2.28.0
+pyyaml>=6.0
 
-- TeX Live с поддержкой XeLaTeX
-  Для сборки PDF используется движок xelatex.
-
-  Рекомендуемые пакеты:
-  - fontspec
-  - geometry
-  - hyperref
-  - xcolor
-  - polyglossia или babel (для многоязычного текста)
-  - шрифты с поддержкой Unicode и кириллицы
-    (например: Noto Sans/Serif, DejaVu, Liberation, CMU)
-
-## Инструменты для проверок (Makefile targets)
-
-- markdownlint-cli2
-  npm install -g markdownlint-cli2
-
-- lychee
-  https://lychee.cli.rs/installation
-
-## Инструменты для работы со скриптами
-
-- bash >= 4.0
-- make
-- git
-
-## Python для учебного примера examples/task-service/
-
-- Python >= 3.10
-- pip
-- virtualenv или venv (опционально)
-
-## Установка под популярные ОС
-
-### macOS (Homebrew)
-
-# Минимальный вариант:
-brew install pandoc basictex
-
-# Полный вариант (рекомендуется, если место позволяет):
-brew install --cask mactex
-
-# Проверки:
-npm install -g markdownlint-cli2
-brew install lychee
-
-### Ubuntu / Debian
-
-sudo apt-get update
-sudo apt-get install -y \
-  pandoc \
-  texlive-xetex \
-  texlive-fonts-recommended \
-  texlive-lang-cyrillic \
-  fonts-noto-cjk \
-  fonts-noto-core
-
-# Проверки:
-npm install -g markdownlint-cli2
-cargo install lychee
-
-### Windows
-
-1. Установить pandoc: https://pandoc.org/installing.html
-2. Установить MiKTeX или TeX Live для Windows.
-3. Убедиться, что xelatex доступен в PATH.
-4. markdownlint-cli2: npm install -g markdownlint-cli2
-5. lychee: https://lychee.cli.rs/installation
-
-## Проверка окружения
-
-pandoc --version
-xelatex --version
-markdownlint-cli2 --version
-lychee --version
-python3 --version
-make --version
-
-## Примечание
-
-PDF-файлы являются артефактами сборки и игнорируются Git
-(см. .gitignore: *.pdf, .pdf, /dist/).
+## Примечание по шрифтам
+# xhtml2pdf встраивает системный шрифт в PDF. Для корректного отображения
+# кириллицы скрипт ищет один из распространённых шрифтов:
+#   macOS:    /System/Library/Fonts/Supplemental/Arial.ttf
+#   Linux:    /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+#             /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
+#   Windows:  C:/Windows/Fonts/arial.ttf
+# Если ни один не найден, PDF будет сгенерирован, но кириллица может
+# отображаться некорректно.
