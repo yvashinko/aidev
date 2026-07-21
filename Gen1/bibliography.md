@@ -40,3 +40,7 @@
 - [SWE-bench](https://www.swebench.com) — кодинг-агенты.
 - [Anthropic Engineering Blog](https://www.anthropic.com/engineering).
 - [Simon Willison's Weblog](https://simonwillison.net).
+
+## Актуальные срезы инструментов
+
+- [`research/2026-07-ai-landscape.md`](../research/2026-07-ai-landscape.md) — срез AI-моделей и инструментов разработки на июль 2026 с учётом ограничений для Беларуси.
