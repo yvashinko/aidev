@@ -1,0 +1,92 @@
+# environment.txt — зависимости окружения для работы с репозиторием
+#
+# Этот файл описывает инструменты, необходимые для сборки PDF/HTML,
+# запуска проверок и работы с учебным примером.
+
+## Обязательно для конвертации Markdown → PDF
+
+- pandoc >= 3.0
+  https://pandoc.org/installing.html
+
+- TeX Live с поддержкой XeLaTeX
+  Для сборки PDF используется движок xelatex.
+
+  Рекомендуемые пакеты:
+  - fontspec
+  - geometry
+  - hyperref
+  - xcolor
+  - polyglossia или babel (для многоязычного текста)
+  - шрифты с поддержкой Unicode и кириллицы
+    (например: Noto Sans/Serif, DejaVu, Liberation, CMU)
+
+## Инструменты для проверок (Makefile targets)
+
+- markdownlint-cli2
+  npm install -g markdownlint-cli2
+
+- lychee
+  https://lychee.cli.rs/installation
+
+## Инструменты для работы со скриптами
+
+- bash >= 4.0
+- make
+- git
+
+## Python для учебного примера examples/task-service/
+
+- Python >= 3.10
+- pip
+- virtualenv или venv (опционально)
+
+## Установка под популярные ОС
+
+### macOS (Homebrew)
+
+# Минимальный вариант:
+brew install pandoc basictex
+
+# Полный вариант (рекомендуется, если место позволяет):
+brew install --cask mactex
+
+# Проверки:
+npm install -g markdownlint-cli2
+brew install lychee
+
+### Ubuntu / Debian
+
+sudo apt-get update
+sudo apt-get install -y \
+  pandoc \
+  texlive-xetex \
+  texlive-fonts-recommended \
+  texlive-lang-cyrillic \
+  fonts-noto-cjk \
+  fonts-noto-core
+
+# Проверки:
+npm install -g markdownlint-cli2
+cargo install lychee
+
+### Windows
+
+1. Установить pandoc: https://pandoc.org/installing.html
+2. Установить MiKTeX или TeX Live для Windows.
+3. Убедиться, что xelatex доступен в PATH.
+4. markdownlint-cli2: npm install -g markdownlint-cli2
+5. lychee: https://lychee.cli.rs/installation
+
+## Проверка окружения
+
+pandoc --version
+xelatex --version
+markdownlint-cli2 --version
+lychee --version
+python3 --version
+make --version
+
+## Примечание
+
+PDF-файлы являются артефактами сборки и игнорируются Git
+(см. .gitignore: *.pdf, .pdf, /dist/).
